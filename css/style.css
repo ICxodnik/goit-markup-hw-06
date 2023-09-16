@@ -16,7 +16,7 @@
     --cl-modal_background: #FCFCFC;
     /* others */
     --default-gap-cl: 24px;
-    --default-list-display: flex;
+    --items: 4;
 }
 
 /* reset styles start */
@@ -84,8 +84,13 @@ main {
 }
 
 .list {
-    display: var(--default-list-display);
+    display: flex;
     gap: var(--default-gap-cl);
+    /* flex-wrap: wrap; */
+}
+
+.card-set {
+    flex-basis: calc((100% - var(--default-gap-cl) * (var(--items) - 1)) / var(--items));
 }
 
 .visually-hidden {
@@ -112,6 +117,13 @@ main {
 
 .wedoing-section {
     padding-top: 0;
+    display: none;
+}
+@media (min-width: 1158px) {
+
+    .wedoing-section { 
+        display: block;
+    }
 }
 
 .section-title {
@@ -127,7 +139,8 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* gap: 24px;  */
+    --default-gap-cl: 24px;
+    --items: 4;
 }
 
 .social-link-img {
@@ -278,8 +291,9 @@ main {
 }
 
 .nav-list {
-    --default-list-display: inline-flex;
+    display: inline-flex;
     --default-gap-cl: 40px;
+    --items: 4;
 }
 
 .nav-title.selected-nav {
@@ -300,6 +314,7 @@ main {
 
 .address-list {
     --default-gap-cl: 40px;
+    --items: 2;
 }
 
 .address-detail {
@@ -357,11 +372,6 @@ main {
 
 /* about studio start */
 
-.aboutstudio-list {
-    /* display: flex;
-    gap: 24px; */
-}
-
 .aboutstudio-thumb {
     border-radius: 4px;
     background-color: var(--cl-light);
@@ -373,8 +383,16 @@ main {
     margin-bottom: 8px;
 }
 
+.aboutstudio-list {
+    /* display: flex;
+    gap: 24px; */
+    --items: 4;
+    --default-gap-cl: 24px;
+}
+
 .aboutstudio-el {
-    flex-basis: calc((100% - 3 * 24px) / 4);
+    --items: 4;
+    --default-gap-cl: 24px;
 }
 
 .aboutstudio-title {
@@ -397,10 +415,12 @@ main {
 .wedoing-list {
    /* display: flex;
     gap: 24px; */
+    --items: 3;
+    --default-gap-cl: 24px;
 }
-
 .wedoing-el {
-    flex-basis: calc((100% - 2 * 16px) / 3);
+    --items: 3;
+    --default-gap-cl: 16px;
 }
 
 /* team start */
@@ -442,7 +462,9 @@ main {
 
 /* customer start */
 .customer-list-el {
-    width: calc((100% - (24px * 5)) / 6);
+    --items: 6;
+    --default-gap-cl: 24px;
+    
     height: 88px;
 }
 
@@ -586,6 +608,8 @@ main {
 .filter-list {
     justify-content: center;
     margin-bottom: 72px;
+    --items: 5;
+    --default-gap-cl: 24px;
 }
 
 .filter-btn {
@@ -617,13 +641,13 @@ main {
 
 .portfolio-list {
     flex-wrap: wrap;
-    row-gap: 48px;
     justify-content: center;
+    --items: 3;
+    --default-gap-cl: 24px;
 }
 
 .exemple-el {
     background: var(--cl-white_background);
-    flex-basis: calc((100% - 2 * 24px) / 3);
 }
 
 .exemple-thumb {
