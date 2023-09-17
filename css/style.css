@@ -581,7 +581,25 @@ main {
 
 .team-list {
     flex-wrap: wrap;
+    --items: 1;
+    --default-gap-cl: 72px;
+    --default-gap-row: 24px;
 }
+@media (min-width: 428px) and (max-width: 767px) {
+    .team-list {
+        --items: 1;
+    }
+}
+@media (min-width: 768px) and (max-width: 1157px) {
+    .team-list {
+        --items: 2;
+    }
+}
+@media (min-width: 1158px) {
+    .team-list {
+        --items: 4;
+    }
+} 
 
 .team-el {
     background: var(--cl-white_background);
