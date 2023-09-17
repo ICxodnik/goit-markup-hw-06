@@ -582,11 +582,6 @@ main {
 .team-list {
     flex-wrap: wrap;
 }
-@media (min-width: 869px) {
-    .team-list {
-        flex-wrap: nowrap;
-    }
-}
 
 .team-el {
     background: var(--cl-white_background);
