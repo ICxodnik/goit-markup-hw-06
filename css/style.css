@@ -622,8 +622,7 @@ main {
 }
 .customer-list {
     flex-wrap: wrap;
-}
-    /* --items: 2;
+    --items: 2;
     --default-gap-cl: 16px;
 }
 @media (min-width: 428px) and (max-width: 767px) {
@@ -643,7 +642,7 @@ main {
         --items: 6;
         --default-gap-cl: 24px;
     }
-}  */
+}  
 
 
 .customer-el-link {
