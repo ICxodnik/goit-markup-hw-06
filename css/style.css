@@ -959,7 +959,7 @@ main {
 
 .modal {
     position: absolute;
-    width: 408px;
+    min-width: 300px;
     min-height: 584px;
     top: 50%;
     left: 50%;
