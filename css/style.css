@@ -407,6 +407,15 @@ main {
     margin: 0 auto; 
 }
 
+@media only screen and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero-section {
+    background-image:  linear-gradient(var(--cl-hero_background), var(--cl-hero_background)),
+      url('../images/hero/hero-bg@2x.jpg');
+  }
+}
+
 .hero-button {
     margin: 48px auto;
     height: 56px;
