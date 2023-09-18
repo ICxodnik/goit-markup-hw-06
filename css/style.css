@@ -740,6 +740,8 @@ main {
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    row-gap: 72px;
+    column-gap: 24px;
 }
 
 /* mobile end */
@@ -762,6 +764,8 @@ main {
     .footer-container {
         flex-direction: row;
         justify-content: left;
+        row-gap: unset;
+        column-gap: unset;
     }
 } 
 /* pc end */
