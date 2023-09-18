@@ -141,6 +141,12 @@ main {
 .section {
     padding: 120px 0;
 }
+@media(max-width: 1157px) {
+    .section {
+        padding: 96px 0;
+    }
+}
+
 
 .section-title {
     text-align: center;
@@ -437,6 +443,11 @@ main {
     max-width: 1440px;
     margin: 0 auto; 
 }
+@media(max-width: 1157px) {
+    .hero-section {
+        padding: 112px 0;
+    }
+}
 
 @media only screen and (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
@@ -464,6 +475,11 @@ main {
     font-size: 36px;
     line-height: 1.11;
     letter-spacing: 0.02em;
+}
+@media(max-width: 767px) {
+    .hero-title {
+        max-width: 320px;
+    }
 }
 /* mobile end */
 @media (min-width: 768px) {
@@ -582,8 +598,8 @@ main {
 .team-list {
     flex-wrap: wrap;
     --items: 1;
-    --default-gap-cl: 72px;
-    --default-gap-row: 24px;
+    --default-gap-cl: 24px;
+    --default-gap-row: 72px;
 }
 @media (min-width: 428px) and (max-width: 767px) {
     .team-list {
@@ -593,6 +609,8 @@ main {
 @media (min-width: 768px) and (max-width: 1157px) {
     .team-list {
         --items: 2;
+        --default-gap-cl: 24px;
+        --default-gap-row: 65px;
     }
 }
 @media (min-width: 1158px) {
@@ -635,6 +653,11 @@ main {
 /* team end */
 
 /* customer start */
+@media (min-width: 768px) and (max-width: 1157px) {
+    .customers-section {
+        max-width: 584px;
+    }
+}
 .customer-list-el {
     height: 88px;
 }
@@ -642,6 +665,7 @@ main {
     flex-wrap: wrap;
     --items: 2;
     --default-gap-cl: 16px;
+    --default-gap-row: 72px;
 }
 @media (min-width: 428px) and (max-width: 767px) {
     .customer-list {
@@ -661,7 +685,6 @@ main {
         --default-gap-cl: 24px;
     }
 }  
-
 
 .customer-el-link {
     width: 100%;
@@ -716,8 +739,6 @@ main {
     display: flex;
     align-items: center;
     flex-direction: column;
-    row-gap: 72px;
-    column-gap: 24px;
     justify-content: center;
 }
 
@@ -1186,7 +1207,7 @@ main {
     flex-direction: column;
     width: 100%;
     height: 100%;
-    padding: 30px;
+    padding: 80px 35px 40px 40px;
     background-color: var(--cl-modal_background);
     transform: translateX(100%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1195,7 +1216,5 @@ main {
     transform: translateX(0);
     transition-delay: 200ms;
   }
-
-  
   
 /* mobile menu end */
